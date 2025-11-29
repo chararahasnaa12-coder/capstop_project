@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة إدارة الأخبار</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text-ar-big">مكتبة مهدي المتجولة</span>
+                    <span class="logo-text-sub">صفحة مدير الأخبار</span>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="news_admin.html" class="active">إدارة الأخبار</a>
+                <a href="index.html">الصفحة الرئيسية</a>
+                <a href="logout.html" >تسجيل خروج</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ADD NEWS FORM -->
+    <section class="section">
+        <div class="container">
+            <h2>إضافة خبر جديد</h2>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+
+                <label>عنوان الخبر:</label>
+                <input type="text" name="title" placeholder="اكتب عنوان الخبر..." required>
+
+                <br><br>
+
+                <label>نوع الخبر:</label>
+                <select name="category">
+                    <option value="تحديث">تحديث</option>
+                    <option value="نشاط">نشاط</option>
+                    <option value="إنجاز">إنجاز</option>
+                </select>
+
+                <br><br>
+
+                <label>الوصف:</label>
+                <textarea name="description" style="width: 60%; height: 150px; border: 3px solid #76499C; border-radius: 10px; padding: 10px; font-size: 16px;">
+                </textarea>
+
+                <br><br>
+
+                <label>إرفاق صورة:</label>
+                <input type="file" name="image" accept="image/*">
+
+                <br><br>
+
+                <button class="btn btn-primary" type="submit">إضافة الخبر</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- EXISTING NEWS MANAGEMENT -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>إدارة الأخبار الحالية</h2>
+
+            <div class="grid grid-2">
+
+                <!-- Example news item 1 -->
+                <article class="card news-card">
+                    <div class="news-row">
+                        <img src="images/news1.jpg" class="news-thumb">
+                        <div>
+                            <p class="news-tag">إنجاز</p>
+                            <h3>زيارة المكتبة لمدرسة المهدي</h3>
+                            <p>استفاد 120 طالباً من الأنشطة الثقافية.</p>
+
+                            <button class="btn btn-secondary" style="margin-top: 10px;">تعديل</button>
+                            <button class="btn btn-primary" style="background-color: #c62828; margin-top: 10px;">حذف</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Example news item 2 -->
+                <article class="card news-card">
+                    <div class="news-row">
+                        <img src="images/news2.jpg" class="news-thumb">
+                        <div>
+                            <p class="news-tag">تحديث</p>
+                            <h3>إطلاق الموقع الجديد</h3>
+                            <p>تم إضافة صفحة التسجيل وتقديم طلبات الزيارة.</p>
+
+                            <button class="btn btn-secondary" style="margin-top: 10px;">تعديل</button>
+                            <button class="btn btn-primary" style="background-color: #c62828; margin-top: 10px;">حذف</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>© 2025 المكتبة المتجولة. لوحة إدارة الأخبار.</p>
+            <p class="footer-links">
+                <a href="#">الإعدادات</a>
+                <span>•</span>
+                <a href="#">تواصل الدعم</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
